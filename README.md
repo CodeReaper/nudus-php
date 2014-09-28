@@ -40,33 +40,33 @@ To map a URL like '/php/echo/key1/value1/key2/value2', you could create a php co
 
 ## Views
 
-Nudus provides two global functions to aid you in creating your views, view and asset.
+Nudus provides two global functions to aid you in creating your views, view and baseurl.
 
 ### view($name, $data)
 
 Extracts the key-value data from the $data parameter and loads the the file /view/{$name}.php.
 
-### asset($name)
+### baseurl($name)
 
-Print the path to /public/{$name} asset.
+Print $name prepended with the site root. Useful for when the site is e.g. located at /subdir/ to create a link to an asset or another page.
 
 ## Benchmark
 
 Testing machine:
 
-<pre>    Hardware Overview:
+<pre>Hardware Overview:
 
-      Model Name: MacBook Pro
-      Model Identifier: MacBookPro10,2
-      Processor Name: Intel Core i7
-      Processor Speed: 2,9 GHz
-      Number of Processors: 1
-      Total Number of Cores: 2
-      L2 Cache (per Core): 256 KB
-      L3 Cache: 4 MB
-      Memory: 8 GB</pre>
+  Model Name: MacBook Pro
+  Model Identifier: MacBookPro10,2
+  Processor Name: Intel Core i7
+  Processor Speed: 2,9 GHz
+  Number of Processors: 1
+  Total Number of Cores: 2
+  L2 Cache (per Core): 256 KB
+  L3 Cache: 4 MB
+  Memory: 8 GB</pre>
 
-A single request when the testing machine was idle used 0.0003 seconds and 256 Kb RAM.
+A single request on the testing machine uses 256 Kb RAM.
 
 Siege of 1000 requests with 5 concurrent clients' result is below.
 

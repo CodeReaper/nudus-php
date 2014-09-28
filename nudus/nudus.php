@@ -8,10 +8,10 @@ define('NUDUS_CONTROLLER_SUFFIX', 'Controller');
 define('NUDUS_ACTION_SUFFIX', 'Action');
 define('NUDUS_DEFAULT_CONTROLLER', 'default');
 define('NUDUS_DEFAULT_ACTION', 'default');
-define('NUDUS_ASSET', str_replace($_SERVER['DOCUMENT_ROOT'], '', NUDUS) . 'public' . DIRECTORY_SEPARATOR);
+define('NUDUS_BASE_URL', str_replace($_SERVER['DOCUMENT_ROOT'], '', NUDUS));
 
-function asset($name) {
-	echo NUDUS_ASSET . $name;
+function baseurl($name) {
+	echo NUDUS_BASE_URL . $name;
 }
 
 function view($name, $data = array()) {
