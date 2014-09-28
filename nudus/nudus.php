@@ -10,8 +10,12 @@ define('NUDUS_DEFAULT_CONTROLLER', 'default');
 define('NUDUS_DEFAULT_ACTION', 'default');
 define('NUDUS_BASE_URL', str_replace($_SERVER['DOCUMENT_ROOT'], '', NUDUS));
 
-function baseurl($name) {
-	echo NUDUS_BASE_URL . $name;
+function baseurl($name, $return = false) {
+	if ($return) {
+		return NUDUS_BASE_URL . $name;
+	} else {
+		echo NUDUS_BASE_URL . $name;
+	}
 }
 
 function view($name, $data = array()) {
@@ -25,7 +29,7 @@ function route($controller, $action, $key_value_pairs) {
 		require $controllerPath;
 		$controller = new $controller();
 		if (method_exists($controller, $action)) {
-			call_user_func_array(array($controller, $action), $key_value_pairs);
+			call_user_func_array(array($controller, $action), array($key_value_pairs));
 			exit(0);
 		}
 	}

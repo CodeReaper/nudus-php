@@ -46,9 +46,9 @@ Nudus provides two global functions to aid you in creating your views, view and 
 
 Extracts the key-value data from the $data parameter and loads the the file /view/{$name}.php.
 
-### baseurl($name)
+### baseurl($name, $return = false)
 
-Print $name prepended with the site root. Useful for when the site is e.g. located at /subdir/ to create a link to an asset or another page.
+Prints or returns $name prepended with the site root. Useful for when the site is e.g. located at /subdir/ to create a link to an asset or another page.
 
 ## Benchmark
 
