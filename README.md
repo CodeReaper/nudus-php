@@ -1,7 +1,7 @@
 nudus-php
 =========
 
-If you only want MVC and you mean ONLY that, this is the *(not-really-a-)*framework for you.
+If you only want MVC and you mean ONLY that, this is the (not-really-a-)framework for you.
 
 ## Getting started
 
